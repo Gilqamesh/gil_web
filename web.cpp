@@ -140,7 +140,7 @@ static int fetch_url_sync(const std::string& scheme, const std::string& host_nam
 #endif
 }
 
-void async_fetch__create_async(
+void get_async(
     const std::string& scheme, const std::string& host_name, size_t port, const std::string& path_name,
     const std::function<void(const unsigned char* serialized_data, size_t serialized_data_size)>& on_success,
     const std::function<void()>& on_failure
@@ -153,7 +153,7 @@ void async_fetch__create_async(
     fetch_url_async(scheme, host_name, port, path_name, self);
 }
 
-void async_fetch__create_sync(
+void get_sync(
     const std::string& scheme, const std::string& host_name, size_t port, const std::string& path_name,
     const std::function<void(const unsigned char* serialized_data, size_t serialized_data_size)>& on_success,
     const std::function<void()>& on_failure
