@@ -1,8 +1,8 @@
 #ifndef GIL_WEB_API
 # define GIL_WEB_API
 
-# define GIL_WEB_VERSION_MAJOR @gil_web_VERSION_MAJOR@
-# define GIL_WEB_VERSION_MINOR @gil_web_VERSION_MINOR@
+# define GIL_WEB_VERSION_MAJOR @gilweb_VERSION_MAJOR@
+# define GIL_WEB_VERSION_MINOR @gilweb_VERSION_MINOR@
 
 # include <string>
 # include <vector>
