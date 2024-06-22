@@ -101,7 +101,7 @@ static int fetch_url_emscripten_sync(const std::string& scheme, const std::strin
 static int fetch_url_desktop(const std::string& scheme, const std::string& host_name, size_t port, const std::string& path_name, async_fetch_t* result) {
     int fetch_result = 0;
 
-    httplib::Client cli(host_name + ":" + std::to_string(port));
+    httplib::Client cli(scheme + "://" + host_name + ":" + std::to_string(port));
     httplib::Result res = cli.Get("/" + path_name);
     if (!res) {
         std::cerr << "httplib::Client::Get failed '" << url_combine(scheme, host_name, port, path_name) << "'" << std::endl;
